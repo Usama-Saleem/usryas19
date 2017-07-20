@@ -65,7 +65,7 @@ if(isset($_POST['login']))
 	
 	$id=$_POST['id'];
 	$name=$_POST['password'];
-if($id=="1" && $name=="bilal")
+if($id=="usama saleem" && $name=="1234")
 {
 	
 	echo "<script>
