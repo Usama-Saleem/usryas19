@@ -1,4 +1,5 @@
 <?php
+echo "Hello World";
 
 /*
 ** History of this class:
