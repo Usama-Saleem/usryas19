@@ -1,28 +1,81 @@
-<?php 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body
+{
+	background-color:grey;
+	
 
-/* Calculator */ 
+}
+div
+{
+	width:200px;
+	height:200px;
+	background-color:blue;
+margin-left:500px;
+margin-top:200px;
+padding:100px;
+border-radius:30px;
+
+}
+
+</style>
+</head>
+
+<body>
+<?php
+$host="localhost";
+$user="root";
+$password="";
+$databse="user";
+$conn=mysqli_connect($host,$user,$password);
+mysqli_select_db($conn,$databse);
 
 
-if($submit) 
-{ 
-   if($operator == '*') 
-   { 
-       echo $numa * $numb; 
-   } elseif($operator == '/') 
-   { 
-       echo $numa / $numb; 
-   } elseif($operator == '+') 
-   { 
-       echo $numa + $numb; 
-   } elseif($operator == '-') 
-   { 
-       echo $numa - $numb; 
-   } 
-} else { ?> 
-<form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>"> 
- <input type="text" name="numa" size="10"> 
- <input type="text" name="operator" size="2"> 
- <input type="text" name="numb" size="10"> 
- <input type="submit" value="Calculate" name="submit"> 
-</form> 
-<?php } ?>
+ 
+?>
+<div>
+<form method="post" action="">
+<table>
+<tr>
+<td>login id</td>
+<td><input type="text" name="id"/></td>
+</tr>
+<tr>
+<td> password</td>
+<td><input type="password" name="password"/>
+</tr>
+<tr>
+<tr>
+<td> <input type="submit" name="login"/></td>
+
+</tr>
+</table>
+</form>
+</div>
+
+
+
+<?php
+if(isset($_POST['login']))
+{
+	
+	$id=$_POST['id'];
+	$name=$_POST['password'];
+if($id=="1" && $name=="bilal")
+{
+	
+	echo "<script>
+alert('you are log in')
+</script>";
+}
+}
+?>
+
+ 
+
+</body>
+</html>
